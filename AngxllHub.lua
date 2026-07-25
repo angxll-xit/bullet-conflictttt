@@ -416,25 +416,3 @@ UserInputService.InputChanged:Connect(function(Input)
         )
     end
 end)
-local Tabs = {
-    Search = SearchFrame,
-    Farming = FarmingFrame,
-    General = GeneralFrame,
-    Server = ServerFrame,
-    Config = ConfigFrame
-}
-
-local function OpenTab(Name)
-    for _, Frame in pairs(Tabs) do
-        Frame.Visible = false
-    end
-    Tabs[Name].Visible = true
-end
-
-SearchButton.MouseButton1Click:Connect(function()
-    OpenTab("Search")
-end)
-
-FarmingButton.MouseButton1Click:Connect(function()
-    OpenTab("Farming")
-end)
